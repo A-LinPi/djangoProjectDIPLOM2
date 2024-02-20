@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DjangoAdminGeomap example</title>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+</head>
+
+<header class="header">
+    <nav>
+        <a href="{% url 'home' %}">Главная</a>
+        <a href="{% url 'all_events' %}">События</a>
+        <a href="{% url 'all_cinema' %}">Кинотеатры</a>
+        <a href="{% url 'all_theatres' %}">Театры</a>
+    </nav>
+</header>
+<body>
+    <h1>КИНОТЕАТРЫ!</h1>
+    <div class="section">
+        {% for one in cinema_base %}
+            <div class="card">
+                <h3>{{ one.name }}</h3>
+                <p>{{ one.category}}</p>
+                <img width="140" height="200"src="{{ one.image }}" alt="">
+                <b>Режим работы</b>
+                <p>Понедельник: с {{ one.mon_start}} до {{ one.mon_end }}
+                <p>Вторник: с {{ one.tue_start }} до {{ one.thu_start }}</p>
+                <p>Среда: с {{ one.wed_start }} до {{ one.wed_end }}</p>
+                <p>Четверг: с {{ one.thu_start }} до {{ one.thu_end }}</p>
+                <p>Пятница: с {{ one.fri_start }} до {{ one.fri_end }}</p>
+                <p>Суббота: с {{ one.sat_start }} до {{ one.sat_end }}</p>
+                <p>Воскресенье: с {{ one.sun_start}} до {{ one.sun_end }}</p>
+                <p>{{ one.desc }}</p>
+            </div>
+    </div>
+{#        <img width="140" height="200"src="{{ one.image }}" alt="">#}
+{#        <p>Где проходит: </p>#}
+{#            {% for comp in one.company.all %}#}
+{#                    <p>{{ comp.name }}</p>#}
+{#            {% endfor %}#}
+{#        <p>{{ one.datetime_end }}</p>#}
+{#        <p>{{ one.datetime_end }}</p>#}
+{#        <p>{{ one.desc }}</p>#}
+   {% endfor %}
+
+</body>
+</html>

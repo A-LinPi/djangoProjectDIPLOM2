@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block title %}
+    <title>Театры</title>
+{% endblock title %}
+{% block content %}
+    <h1>Театры</h1>
+    <div class="section">
+        {% for one in theatres_base %}
+            <div class="card">
+                <h2>{{ one.name }}</h2>
+                <p class="category">
+                    {{ one.category.title}}
+                </p>
+                <div class="card-info">
+                    <img src="{{ one.image }}" alt="">
+                    <div class="time">
+                        <img src="{% static 'img/time.png' %}" alt="">
+                        <p>АДРЕС</p>
+                        <p>{{ one.adr}}</p>
+                        <img src="{% static 'img/location.png' %}" alt="">
+                        <p>РЕЖИМ РАБОТЫ</p>
+                        <p>Понедельник: с {{ one.mon_start}} до {{ one.mon_end }}</p>
+                        <p>Вторник: с {{ one.tue_start }} до {{ one.thu_start }}</p>
+                        <p>Среда: с {{ one.wed_start }} до {{ one.wed_end }}</p>
+                        <p>Четверг: с {{ one.thu_start }} до {{ one.thu_end }}</p>
+                        <p>Пятница: с {{ one.fri_start }} до {{ one.fri_end }}</p>
+                        <p>Суббота: с {{ one.sat_start }} до {{ one.sat_end }}</p>
+                        <p>Воскресенье: с {{ one.sun_start}} до {{ one.sun_end }}</p>
+
+                    </div>
+                </div>
+                <hr>
+                <p>{{ one.desc }}</p>
+            </div>
+    </div>
+   {% endfor %}
+{% endblock content %}

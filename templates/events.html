@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block title %}
+    <title>Кинотеатры</title>
+{% endblock title %}
+{% block content %}
+    <h1>События!</h1>
+    <div class="section">
+    {% for one in events_base %}
+        <div class="card">
+            <h3>{{ one.title }}</h3>
+            {% for comp in one.company.all %}
+                   <p class="category">{{ comp }} </p>
+            {% endfor %}
+            <div class="event">
+                <img src="{{ one.image }}" alt="">
+                <div class="info">
+                    <div class="time">
+                        <p>Начало: {{ one.datetime_end }}</p>
+                        <p>Конец: {{ one.datetime_end }}</p>
+                    </div>
+                    <hr>
+                    <p>{{ one.desc }}</p>
+                </div>
+            </div>
+        </div>
+   {% endfor %}
+{% endblock content %}
