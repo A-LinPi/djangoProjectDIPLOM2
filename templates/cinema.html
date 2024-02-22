@@ -6,12 +6,7 @@
     <title>Кинотеатры</title>
 {% endblock title %}
 {% block content %}
-    <h1>КИНОТЕАТРЫ!</h1>
-    <div>
-        {% for one in cinema_base %}
-            <div>{% include "geomap/common.html" %}</div>
-        {% endfor %}
-    </div>
+    <h1>Кинотеатры</h1>
 
         {% for one in cinema_base %}
             <div class="section">
@@ -35,7 +30,6 @@
                         <p>Пятница: с {{ one.fri_start }} до {{ one.fri_end }}</p>
                         <p>Суббота: с {{ one.sat_start }} до {{ one.sat_end }}</p>
                         <p>Воскресенье: с {{ one.sun_start}} до {{ one.sun_end }}</p>
-
                     </div>
                 </div>
                 <hr>

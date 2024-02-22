@@ -19,7 +19,7 @@
         <a href="{% url 'all_events' %}">События</a>
         <a href="{% url 'all_cinema' %}">Кинотеатры</a>
         <a href="{% url 'all_theatres' %}">Театры</a>
-        <a href="{% url 'all_theatres' %}">Музеи</a>
+        <a href="{% url 'all_museums' %}">Музеи</a>
     </nav>
 </header>
 {% endblock header %}
@@ -88,4 +88,9 @@
 </div>
 {% endblock content %}
 </body>
+{% block footer %}
+<footer>
+  <p>© 2024 Lin</p>
+</footer>
+{% endblock footer %}
 </html>

@@ -24,4 +24,6 @@ urlpatterns = [
     path('events/all', views.events_list, name='all_events'),
     path('cinema/all', views.cinema_list, name='all_cinema'),
     path('theatres/all', views.theatres_list, name='all_theatres'),
+    path('museums/all', views.museums_list, name='all_museums'),
+    path('events/all/cinema', views.cinema_events, name='only_cinema'),
 ]

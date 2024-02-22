@@ -27,3 +27,18 @@ def theatres_list(request):
     theatres_base = company_base.filter(category='theatres')
     data = {'theatres_base': theatres_base}
     return render(request, 'theatres.html', data)
+
+
+def museums_list(request):
+    company_base = Company.objects.all()
+    museums_base = company_base.filter(category='museums')
+    data = {'museums_base': museums_base}
+    return render(request, 'museums.html', data)
+
+
+def cinema_events(request):
+    events_base_cinema = Event.objects.filter(company__category='cinema').distinct()
+    print(events_base_cinema)
+    print(set(events_base_cinema))
+    data = {'events_base': events_base_cinema}
+    return render(request, 'events.html', data)

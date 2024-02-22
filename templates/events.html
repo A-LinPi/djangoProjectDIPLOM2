@@ -1,25 +1,24 @@
 {% extends 'index.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 {% block title %}
-    <title>Кинотеатры</title>
+    <title>События</title>
 {% endblock title %}
 {% block content %}
     <h1>События!</h1>
+    <a href="{% url 'only_cinema' %}"><button>Только фильмы</button></a>
     <div class="section">
-    {% for one in events_base %}
+    {% for one in events_base.all %}
         <div class="card">
-            <h3>{{ one.title }}</h3>
-            {% for comp in one.company.all %}
-                   <p class="category">{{ comp }} </p>
-            {% endfor %}
+
             <div class="event">
                 <img src="{{ one.image }}" alt="">
                 <div class="info">
+                    <h3>{{ one.title }}</h3>
+                    {% for comp in one.company.all %}
+                        <p class="category">{{ comp }} </p>
+                    {% endfor %}
                     <div class="time">
                         <p>Начало: {{ one.datetime_end }}</p>
-                        <p>Конец: {{ one.datetime_end }}</p>
                     </div>
                     <hr>
                     <p>{{ one.desc }}</p>
@@ -27,4 +26,5 @@
             </div>
         </div>
    {% endfor %}
+    </div>
 {% endblock content %}
