@@ -9,12 +9,6 @@ def home(request):
     return render(request, 'index.html', geomap_context(Location.objects.all(), auto_zoom=25))
 
 
-def events_list(request):
-    events_base = Event.objects.all()
-    data = {'events_base': events_base}
-    return render(request, 'events.html', data)
-
-
 def cinema_list(request):
     company_base = Company.objects.all()
     cinema_base = company_base.filter(category='cinema')
@@ -36,9 +30,22 @@ def museums_list(request):
     return render(request, 'museums.html', data)
 
 
+def events_list(request):
+    events_base = Event.objects.all()
+    title = 'Все события'
+    data = {'events_base': events_base, 'title': title}
+    return render(request, 'events.html', data)
+
+
 def cinema_events(request):
     events_base_cinema = Event.objects.filter(company__category='cinema').distinct()
-    print(events_base_cinema)
-    print(set(events_base_cinema))
-    data = {'events_base': events_base_cinema}
+    title = 'Только фильмы'
+    data = {'events_base': events_base_cinema, 'title': title}
+    return render(request, 'events.html', data)
+
+
+def theatres_events(request):
+    events_base_theatres = Event.objects.filter(company__category='theatres').distinct()
+    title = 'Только спектакли'
+    data = {'events_base': events_base_theatres, 'title': title}
     return render(request, 'events.html', data)

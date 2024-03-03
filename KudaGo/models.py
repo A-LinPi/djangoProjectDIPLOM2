@@ -16,18 +16,6 @@ class Location(models.Model, GeoItem):
     @property
     def geomap_latitude(self):
         return '' if self.lat is None else str(self.lat)
-    #
-    # @property
-    # def geomap_popup_view(self):
-    #     return "<strong>{}</strong>".format(str(self))
-    #
-    # @property
-    # def geomap_popup_edit(self):
-    #     return self.geomap_popup_view
-    #
-    # @property
-    # def geomap_popup_common(self):
-    #     return self.geomap_popup_view
 
     def __str__(self):
         return self.name
@@ -66,8 +54,9 @@ class Event(models.Model):
     image = models.URLField(verbose_name='Фотография')
     datetime_start = models.DateTimeField(verbose_name='Дата начала мероприятия')
     datetime_end = models.DateTimeField(verbose_name='Дата завершения мероприятия')
+    duration_hrs = models.IntegerField(verbose_name='Продолжительность (часы)', null=True, blank=True)
+    duration_min = models.IntegerField(verbose_name='Продолжительность (минуты)', null=True, blank=True)
     desc = models.TextField(max_length=1500, verbose_name='Описание')
 
     def __str__(self):
         return self.title
-

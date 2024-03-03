@@ -86,7 +86,7 @@ nav .active {
 }
 
 .section {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   max-width: 1200px;
   width: 90%;
   margin: auto;
@@ -201,7 +201,106 @@ footer {
   color: #fff;
 }
 
+.btn {
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-left: 0;
+  /*outline: none;*/
+  padding: 10px 24px;
+  background-color: transparent;
+  cursor: pointer;
+}
 
+
+/* Стиль активного класса (и кнопки при наведении курсора) */
+.active, .btn:hover {
+  background-color: white;
+  border-bottom: 1px solid coral;
+  color: white;
+}
+
+/*.btn {*/
+/*  box-sizing: border-box;*/
+/*  appearance: none;*/
+/*  border:none;*/
+/*  border-bottom: 2px solid coral;*/
+/*  color: coral;*/
+/*  cursor: pointer;*/
+/*  display: flex;*/
+/*  align-self: center;*/
+/*  font-size: 1rem;*/
+/*  line-height: 1;*/
+/*  padding: 1.2em 2.8em;*/
+/*  text-decoration: none;*/
+/*  text-align: center;*/
+/*  text-transform: uppercase;*/
+/*  font-weight: 700;*/
+/*  background: transparent;*/
+/*}*/
+
+/*.btn:hover,*/
+/*!*.btn:active,*!*/
+/*.btn:focus {*/
+/*  color: #fff;*/
+/*  outline: 0;*/
+/*  box-shadow: 0 0 40px 40px coral inset;*/
+/*}*/
+
+/*!*.active{*!*/
+/*!*  background: black;*!*/
+/*!*}*!*/
+
+
+.tabs {
+  display: inline-flex;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.block {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  display: inline-block;
+  cursor: pointer;
+}
+.myClass{
+  background-color: green;
+}
+
+/*a{*/
+/*  color: #666666;*/
+/*}*/
+/*.nav-tabs{*/
+/*  display: flex;*/
+/*}*/
+/*.nav-tab{*/
+/*  font-size: 20px;*/
+/*  margin-right: 10px;*/
+/*  padding: 20px 30px 20px 30px;*/
+/*  border: 2px solid#eeeeee;*/
+/*  border-bottom: 0;*/
+/*  text-decoration: none;*/
+/*}*/
+/*.nav-tab.active{*/
+/*  background: #eeeeee;*/
+/*  color: coral;*/
+/*  cursor: default;*/
+/*}*/
+/*.tab-content{*/
+/*  font-size: 20px;*/
+/*  background: #eeeeee;*/
+/*}*/
+/*.tab-pane{*/
+/*  display: none;*/
+/*  padding: 30px;*/
+/*}*/
+/*.tab-pane.active{*/
+/*  display: flex;*/
+
+/*}*/
 
 @media screen and (max-width: 800px) {
   nav a {

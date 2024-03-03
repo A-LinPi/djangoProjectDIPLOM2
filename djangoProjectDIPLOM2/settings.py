@@ -34,6 +34,9 @@ INSTALLED_APPS = [
     'django_admin_geomap',
     'KudaGo',
 
+    # 'django.contrib.staticfiles',
+    'django_static_jquery',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

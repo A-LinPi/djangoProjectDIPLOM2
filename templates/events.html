@@ -1,15 +1,19 @@
 {% extends 'index.html' %}
 {% load static %}
+
 {% block title %}
     <title>События</title>
 {% endblock title %}
 {% block content %}
-    <h1>События!</h1>
-    <a href="{% url 'only_cinema' %}"><button>Только фильмы</button></a>
+<h1>{{ title }}</h1>
+
+    <div id="myDIV">
+        <button class="btn active"><a href="{% url 'all_events' %}">Все события</a></button><button class="btn"><a href="{% url 'only_cinema' %}">Только фильмы</a></button><button class="btn"><a href="{% url 'only_theatres' %}">Только спектакли</a></button>
+    </div>
+
     <div class="section">
     {% for one in events_base.all %}
         <div class="card">
-
             <div class="event">
                 <img src="{{ one.image }}" alt="">
                 <div class="info">
@@ -18,13 +22,37 @@
                         <p class="category">{{ comp }} </p>
                     {% endfor %}
                     <div class="time">
-                        <p>Начало: {{ one.datetime_end }}</p>
+                        <p>Продолжительность: {{ one.duration_hrs }} ч {{ one.duration_min}} мин</p>
                     </div>
                     <hr>
                     <p>{{ one.desc }}</p>
                 </div>
             </div>
         </div>
+        <hr>
    {% endfor %}
     </div>
+
+{#<script>{% static 'js/active_tabs.js' %}</script>#}
+<script>
+    const btnContainer = document.getElementById("myDIV");
+
+// Получаем все кнопки с классом "btn" внутри контейнера
+const btns = btnContainer.getElementsByClassName("btn");
+
+// Проходим по кнопкам и добавляем активный класс к текущей/нажатой кнопке
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    const current = document.getElementsByClassName("active");
+
+    // Если активного класса нет
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+
+    // Добавляем активный класс к текущей/нажатой кнопке
+    this.className += " active";
+  });
+}
+</script>
 {% endblock content %}
