@@ -14,9 +14,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from KudaGo import views
+from django.conf.urls import handler404
+# from KudaGo.sitemaps import StaticViewsSitemap
+from django.contrib.sitemaps.views import sitemap
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +32,8 @@ urlpatterns = [
     path('museums/all', views.museums_list, name='all_museums'),
     path('events/all/cinema', views.cinema_events, name='only_cinema'),
     path('events/all/theatres', views.theatres_events, name='only_theatres'),
+    path('contacts', views.contacts, name='contacts'),
 ]
+
+handler404 = 'KudaGo.views.custom_404'
+

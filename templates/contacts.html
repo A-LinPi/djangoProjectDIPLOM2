@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block head %}
+    <head>
+        {% block title %}
+            <title>Контакты</title>
+        {% endblock title %}
+{#         <link href="{% static 'css/main.css' %}" rel="stylesheet">#}
+        <link href="{% static 'css/contacts.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+{% endblock head %}
+{% block content %}
+    <meta name="viewport" content="width=device-width">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Navigation bar-->
+
+    <!--End of navigation bar-->
+    <!-- Fluid container-->
+    <div class="container-fluid">
+    <main>
+    <!--Home page-->
+    <div id="home">
+      <div id="mediaBox">
+        <a  class="btn btn-default" target="_blank" href="https://twitter.com/EdwardNilsson"><i class="fa fa-twitter fa-2x editIcon " aria-hidden="true"></i></a>
+        <a class="btn btn-default" target="_blank" href="https://se.linkedin.com/in/edward-nilsson-33ab54132"><i class="fa fa-linkedin fa-2x editIcon" aria-hidden="true"></i></a>
+        <a class="btn btn-default" target="_blank" href="https://github.com/Enilsson9"><i class="fa fa-github fa-2x editIcon" aria-hidden="true"></i></a>
+        <a class="btn btn-default" target="_blank" href="https://www.freecodecamp.com/enilsson9"><i class="fa fa-free-code-camp fa-2x editIcon" aria-hidden="true"></i></a>
+       </div>
+       <img  class=" img-responsive"  src="https://res.cloudinary.com/dtmuoptb5/image/upload/v1484077032/image-2017-01-10_vcreon.jpg">
+       <h4>Future Front-End Developer <br> Always learning. Always improving.</h4>
+       <h3><b> Web developer - Student - Polyglot - Fitness enthusiast </b><h3>
+    </div>
+    <!--end of home page-->
+    <!--About page-->
+       <div id="about">
+      <h1>About me</h1>
+    <ul>
+      <li> Based in <b>Sweden.</b></li>
+      <li> Started learning code: <b>December 2016.</b></li>
+      <li> Human languages I speak:  <b>Spanish, English and Swedish.</b>
+      <li> Programming languages I understand:  <b>HTML5, CSS3, javascript.</b>
+      <li> Learning  <b>Software Engineering</b> through <b><a href="htttp://freecodecamp.com">freeCodeCamp</a></b> and online tutorials.</li>
+      <li> In my free time I like to lift <b>heavy weights.</b></li>
+     </ul>
+        </div>
+    <!--End of about page-->
+    <!--Contact page-->
+    <div id="contact">
+      <h1>Contact</h1>
+        <form action="mailto:enilsson9@hotmail.com" method="post" enctype="text/plain">
+          <input type="text" placeholder="Name" name="name" size="40"><br>
+          <input type="text" placeholder="Email address" name="mail" size="40"><br>
+          <textarea type="textarea" placeholder="Message" name="comment" size="40"></textarea> <br>
+          <div id="sendbutton">
+            <input id="send" type="submit" class="btn btn-default send" value="Send">
+            <input id="reset" type="reset" class="btn btn-danger reset" value="Reset">
+          </div>
+        </form>
+      <p> Wanna ask me something? Sure! Just keep in mind that I'm a beginner in web programming and web design. Nonetheless, I have some life experience that might help you. Feel free to ask me the meaning of life, how to learn Swedish or just some fitness tips. I usually reply within 24 hours. </p>
+    </div>
+    <!--end of contact page-->
+{% endblock content %}

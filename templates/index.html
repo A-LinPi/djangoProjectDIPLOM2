@@ -20,77 +20,80 @@
         <a href="{% url 'all_cinema' %}">Кинотеатры</a>
         <a href="{% url 'all_theatres' %}">Театры</a>
         <a href="{% url 'all_museums' %}">Музеи</a>
+        <a href="{% url 'contacts' %}">Контакты</a>
     </nav>
 </header>
 {% endblock header %}
 {% block content %}
-<div>{% include "geomap/common.html" %}</div>
-<h1>Добро пожаловать на сайт ИНТЕРЕСНОСТИ</h1>
-<ul id="menu">
-    <li><a href="#1">О проекте</a></li>
-    <li> <a href="#2">Фильмы</a></li>
-    <li> <a href="#3">Спектакли</a></li>
-    <li><a href="#4">Выставки</a></li>
-    <li><a href="#5">События</a>
-  <span class="active" id="active"></span></li>
-</ul>
+    <div class="content">
+    <div>{% include "geomap/common.html" %}</div>
+    <h1>Добро пожаловать на сайт ИНТЕРЕСНОСТИ</h1>
+    <ul id="menu">
+        <li><a href="#1">О проекте</a></li>
+        <li> <a href="#2">Фильмы</a></li>
+        <li> <a href="#3">Спектакли</a></li>
+        <li><a href="#4">Выставки</a></li>
+        <li><a href="#5">События</a>
+      <span class="active" id="active"></span></li>
+    </ul>
 
-<div class="sections">
-  <div class="section" id="1">
-    <div class="card">
-      <h1>О проекте</h1>
-      <img src="https://wedcbiz.org/wp-content/uploads/AdobeStock_406438857.jpeg" alt="" />
-      <p>
-          Если вы захотите выбраться из дома, в выходные или после работы, наш сайт поможет найти для вас интересное мероприятие.
-      </p>
-    </div>
-  </div>
+    <div class="sections">
+      <div class="section" id="1">
+        <div class="card">
+          <h1>О проекте</h1>
+          <img src="https://wedcbiz.org/wp-content/uploads/AdobeStock_406438857.jpeg" alt="" />
+          <p>
+              Если вы захотите выбраться из дома, в выходные или после работы, наш сайт поможет найти для вас интересное мероприятие.
+          </p>
+        </div>
+      </div>
 
-  <div class="section" id="2">
-    <div class="card">
-      <h1>Для любителей кино</h1>
-      <img src="https://cdnstatic.rg.ru/uploads/images/220/77/01/iStock-153554282.jpg" alt="" />
-      <p>
-        Решили пойти в кино? Сайт поможет выбрать самый комфортный кинотеатр поблизости. Вы сможете посмотреть время работы, адрес, и описание кинотеатра
-      </p>
-    </div>
-  </div>
+      <div class="section" id="2">
+        <div class="card">
+          <h1>Для любителей кино</h1>
+          <img src="https://cdnstatic.rg.ru/uploads/images/220/77/01/iStock-153554282.jpg" alt="" />
+          <p>
+            Решили пойти в кино? Сайт поможет выбрать самый комфортный кинотеатр поблизости. Вы сможете посмотреть время работы, адрес, и описание кинотеатра
+          </p>
+        </div>
+      </div>
 
-  <div class="section" id="3">
-    <div class="card">
-      <h1>Для ценителей театра</h1>
-      <img src="https://cdn.culture.ru/images/9935fd70-1270-542b-8478-eadfa9acb44b" alt="" />
-      <p>
-        В Новосибирске проходят представления в совершенно разных жанрах, вы сможете найти вариант для любого возраста. Самым юным зрителям придутся по вкусу детские спектакли, в том числе и постановки кукольных театров. Молодежи будет интересно побывать на современных мюзиклах, комедиях и драмах, а более старшее поколение будет в восторге от классических драматических, оперных и балетных постановок.
-      </p>
-    </div>
-  </div>
+      <div class="section" id="3">
+        <div class="card">
+          <h1>Для ценителей театра</h1>
+          <img src="https://cdn.culture.ru/images/9935fd70-1270-542b-8478-eadfa9acb44b" alt="" />
+          <p>
+            В Новосибирске проходят представления в совершенно разных жанрах, вы сможете найти вариант для любого возраста. Самым юным зрителям придутся по вкусу детские спектакли, в том числе и постановки кукольных театров. Молодежи будет интересно побывать на современных мюзиклах, комедиях и драмах, а более старшее поколение будет в восторге от классических драматических, оперных и балетных постановок.
+          </p>
+        </div>
+      </div>
 
-  <div class="section" id="4">
-    <div class="card">
-      <h1>Музей- это не скучно!</h1>
-      <img src="https://sun9-20.userapi.com/impf/JHhzxdqNn8TVudIXnNMj04MmbaGelUmeiwYaRQ/IJ4RLxPbvaI.jpg?size=2000x1333&quality=96&sign=8eb58c3ab8b19bd447a7ea4ea5ec7a6c&c_uniq_tag=E7VcUX3A3zoaz5dLIMVAjOZsllfOZwigzUPP3QDmhvY&type=album" alt="" />
-      <p>
-        Посетите музеи и выставки. Особенно интересно бывать в краеведческих и исторических музеях разных городов. Ведь в каждом из них своя культура история и традиции. Очень интересны выставки различных ремесел, особенно которые сохранились еще с древних времен. Все это очень интересно и познавательно.
-      </p>
-    </div>
-  </div>
+      <div class="section" id="4">
+        <div class="card">
+          <h1>Музей- это не скучно!</h1>
+          <img src="https://sun9-20.userapi.com/impf/JHhzxdqNn8TVudIXnNMj04MmbaGelUmeiwYaRQ/IJ4RLxPbvaI.jpg?size=2000x1333&quality=96&sign=8eb58c3ab8b19bd447a7ea4ea5ec7a6c&c_uniq_tag=E7VcUX3A3zoaz5dLIMVAjOZsllfOZwigzUPP3QDmhvY&type=album" alt="" />
+          <p>
+            Посетите музеи и выставки. Особенно интересно бывать в краеведческих и исторических музеях разных городов. Ведь в каждом из них своя культура история и традиции. Очень интересны выставки различных ремесел, особенно которые сохранились еще с древних времен. Все это очень интересно и познавательно.
+          </p>
+        </div>
+      </div>
 
-  <div class="section" id="5">
-    <div class="card">
-      <h1>Узнать о всех мероприятиях</h1>
-      <img src="https://fadoco.ru/images/blog/9/4343.jpg" alt="" />
-      <p>
-        Запланировали и в кино, и в музей? Поможем и в этом! На вкладке события можете посмотреть все мероприятия в Новосибирске.
-      </p>
+      <div class="section" id="5">
+        <div class="card">
+          <h1>Узнать о всех мероприятиях</h1>
+          <img src="https://fadoco.ru/images/blog/9/4343.jpg" alt="" />
+          <p>
+            Запланировали и в кино, и в музей? Поможем и в этом! На вкладке события можете посмотреть все мероприятия в Новосибирске.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
 </div>
 {% endblock content %}
+    {% block footer %}
+    <footer>
+      <p>© 2024 Lin</p>
+    </footer>
+    {% endblock footer %}
 </body>
-{% block footer %}
-<footer>
-  <p>© 2024 Lin</p>
-</footer>
-{% endblock footer %}
 </html>

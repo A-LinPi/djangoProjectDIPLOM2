@@ -49,3 +49,11 @@ def theatres_events(request):
     title = 'Только спектакли'
     data = {'events_base': events_base_theatres, 'title': title}
     return render(request, 'events.html', data)
+
+
+def contacts(request):
+    return render(request, 'contacts.html')
+
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)

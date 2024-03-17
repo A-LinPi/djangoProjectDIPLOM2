@@ -15,7 +15,7 @@
     {% for one in events_base.all %}
         <div class="card">
             <div class="event">
-                <img src="{{ one.image }}" alt="">
+                <img src="{{ one.image }}" alt="{{one.title}}">
                 <div class="info">
                     <h3>{{ one.title }}</h3>
                     {% for comp in one.company.all %}
