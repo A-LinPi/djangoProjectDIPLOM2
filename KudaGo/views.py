@@ -5,15 +5,17 @@ from django_admin_geomap import geomap_context
 from .models import Location, Event, Company
 
 
+# def home(request):
+#     return render(request, 'index.html', geomap_context(Location.objects.all(), auto_zoom=25))
 def home(request):
-    return render(request, 'index.html', geomap_context(Location.objects.all(), auto_zoom=25))
+    return render(request, 'index.html', geomap_context(Location.objects.filter(id=1), auto_zoom=25))
 
 
 def cinema_list(request):
     company_base = Company.objects.all()
     cinema_base = company_base.filter(category='cinema')
-    data = {'cinema_base': cinema_base}
-    return render(request, 'cinema.html', data)
+    data = {'cinema_base': cinema_base }
+    return render(request, 'cinema.html', data, geomap_context(Location.objects.filter(id=1), auto_zoom=25))
 
 
 def theatres_list(request):
