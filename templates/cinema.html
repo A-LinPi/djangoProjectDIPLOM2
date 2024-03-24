@@ -6,8 +6,9 @@
     <title>Кинотеатры</title>
 {% endblock title %}
 {% block content %}
-    <div>{% include "geomap/common.html" %}</div>
+
     <h1>Кинотеатры</h1>
+    <div>{% include "geomap/common.html" %}</div>
         {% for one in cinema_base %}
             <div class="section">
             <div class="card">
@@ -75,6 +76,7 @@
                     </div>
                 </div>
                 <hr>
+                <div>{{ one.location_id }}</div>
                 <p>{{ one.desc }}</p>
             </div>
         </div>

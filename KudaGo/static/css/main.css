@@ -53,13 +53,12 @@ h1 {
   padding: 40px 0;
 }
 
-header{
+.main_header {
   position: fixed;
   width: 100%;
   z-index: 3;
   height: 80px;
 }
-
 
 nav {
   background: rgba(255, 255, 255, 0.95);
@@ -71,7 +70,7 @@ nav {
   overflow: hidden;
 }
 
-nav a {
+ nav a {
   flex: 1;
   height: 100%;
   text-transform: uppercase;
@@ -88,7 +87,7 @@ nav a:hover {
   background: #f0f0f0;
 }
 
-nav .active {
+ nav .active {
   width: 0;
   height: 7px;
   background: #0ebeff;
@@ -232,36 +231,6 @@ footer {
   color: white;
 }
 
-/*.btn {*/
-/*  box-sizing: border-box;*/
-/*  appearance: none;*/
-/*  border:none;*/
-/*  border-bottom: 2px solid coral;*/
-/*  color: coral;*/
-/*  cursor: pointer;*/
-/*  display: flex;*/
-/*  align-self: center;*/
-/*  font-size: 1rem;*/
-/*  line-height: 1;*/
-/*  padding: 1.2em 2.8em;*/
-/*  text-decoration: none;*/
-/*  text-align: center;*/
-/*  text-transform: uppercase;*/
-/*  font-weight: 700;*/
-/*  background: transparent;*/
-/*}*/
-
-/*.btn:hover,*/
-/*!*.btn:active,*!*/
-/*.btn:focus {*/
-/*  color: #fff;*/
-/*  outline: 0;*/
-/*  box-shadow: 0 0 40px 40px coral inset;*/
-/*}*/
-
-/*!*.active{*!*/
-/*!*  background: black;*!*/
-/*!*}*!*/
 
 
 .tabs {
